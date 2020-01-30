@@ -6,7 +6,7 @@ const Schema = use('Schema')
 class UserImageFkSchema extends Schema {
   up () {
     this.table('users', (table) => {
-      table.foreign('image_id').reference('id').inTable('images').onDelete('cascade')
+      table.foreign('image_id').references('id').inTable('images').onDelete('cascade')
     })
   }
 
